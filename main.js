@@ -15,7 +15,12 @@ const playerOnePlaceholder = document.getElementById("player-one-score");
 const playerTwoPlaceholder = document.getElementById("player-two-score");
 const tiePlaceholder = document.getElementById("tie-score");
 const restartBtn = document.getElementById("restart-after-win");
-const clearScore = document.getElementById("clear-score");
+// const clearScore = document.getElementById("clear-score");
+// const selectSym = document.querySelector(".selectSym");
+// const multiPlayerBtn = document.getElementById("multiplayer");
+// const aiBtn = document.getElementById("ai");
+// const choice = document.querySelector(".choose");
+// const section = document.querySelector(".board")
 
 const winningPatterns = [
   [1, 2, 3],
@@ -28,14 +33,31 @@ const winningPatterns = [
   [7, 8, 9],
 ];
 
-//add click event to each box
+// var one = sessionStorage.getItem("p1Score");
+// var two = sessionStorage.getItem("p2Score");
+// var tie = sessionStorage.getItem("tieScore");
+// if(one == 0 && two == 0 && tie == 0){
+//   selectSym.style.display = "flex";
+// }
+
+// multiPlayerBtn.addEventListener("click", function(){
+//   //add click event to each box
+//   // selectSym.style.display = "none";
+//   // choice.style.display = "flex";
+
+  
+// });
+
+// aiBtn.addEventListener("click", function(){
+
+// });
 boxes.forEach((box) => {
   box.addEventListener(
     "click",
     (e) => {
       const turn = document.getElementById("turn");
       let target = e.target;
-      console.log(target.id);
+      // console.log(target.id);
       valueArray.push(Number(target.id));
       if (clickCounter % 2 === 0) {
         target.innerText = "X";
@@ -97,6 +119,7 @@ if (!sessionStorage.getItem("tieScore")) {
 playerOnePlaceholder.innerText = sessionStorage.getItem("p1Score");
 playerTwoPlaceholder.innerText = sessionStorage.getItem("p2Score");
 tiePlaceholder.innerText = sessionStorage.getItem("tieScore");
+
 
 function addPlayerOneScore() {
   playerOneScore = Number(sessionStorage.getItem("p1Score"));

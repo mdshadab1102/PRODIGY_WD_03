@@ -26,12 +26,12 @@ body {
   align-items: center;
   background-color: #000;
   color: #fff;
+  position: relative;
 }
 
 main {
   width: 34rem;
   height: 35rem;
-  position: relative;
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -39,6 +39,58 @@ main {
   align-items: center;
 }
 
+.selectSym{
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100vh;
+  font-size: 2rem;
+  z-index: 5;
+  background-color: #1a2a3278;
+  backdrop-filter: blur(10px); 
+/*   visibility: hidden; */
+}
+.choose{
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100vh;
+  font-size: 2rem;
+  z-index: 5;
+  background-color: #1a2a3278;
+  backdrop-filter: blur(10px);
+}
+.choose button{
+  width: 7rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  background-color: #2e4756;
+  color: #fff;
+  border-radius: 50px;
+}
+
+.selectSym button{
+  width: 10rem;
+  padding: 1rem;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  background-color: #2e4756;
+  color: #fff;
+  border-radius: 50px;
+}
 
 .winner {
   position: absolute;
